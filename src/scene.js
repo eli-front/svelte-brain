@@ -23,8 +23,6 @@ const animate = () => {
   renderer.render(scene, camera);
 };
 
-const resize 
-
 const loadObject = (path) => {
   loader.load(
     path,
@@ -58,12 +56,12 @@ export const createScene = (element) => {
 };
 
 window.onresize = () => {
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
 };
 
-window.onwheel = (event) => objects.forEach((object) => {
+window.onwheel = (event) =>
+  objects.forEach((object) => {
     object.rotation.y += event.deltaY / 100;
-});
-
+  });
